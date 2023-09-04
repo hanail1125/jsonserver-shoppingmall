@@ -1,0 +1,118 @@
+.login-button {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 10px 15px;
+	font-size: 14px;
+	cursor: pointer;
+	> span {
+		margin-left: 5px;
+	}
+}
+
+.logo {
+	display: flex;
+	justify-content: center;
+	margin: 25px;
+	& img {
+		width: 100px;
+		height: 50px;
+		cursor: pointer;
+	}
+}
+
+.menuArea {
+	display: flex;
+	position: relative;
+	align-items: center;
+	margin-bottom: 10px;
+	& .menu {
+		margin: auto;
+		& .menuList {
+			list-style: none;
+			display: flex;
+			gap: 20px;
+			padding: 0;
+			cursor: pointer;
+		}
+	}
+	& .search {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		position: absolute;
+		right: 15px;
+		padding-bottom: 7px;
+		border-bottom: 3px solid #ccc;
+		font-size: 14px;
+		& input {
+			border: 0;
+			outline: none;
+			font-size: 15px;
+		}
+	}
+}
+
+.productCard {
+	margin: 10px 0;
+	transition: 0.3s;
+	background: #fff;
+	cursor: pointer;
+	&:hover {
+		scale: 1.08;
+	}
+}
+
+.LoginArea {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	& .LoginForm {
+		width: 600px;
+		border: 1px solid #ddd;
+		padding: 30px;
+	}
+}
+
+.product-img {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.product-info {
+	> div {
+		margin-bottom: 20px;
+		> div {
+			margin-bottom: 10px;
+			&.pn {
+				color: blue;
+				font-weight: 600;
+			}
+			&.pt {
+				font-size: 20px;
+			}
+			&.pp {
+				font-size: 20px;
+				font-weight: 500;
+			}
+			&.pc {
+				font-size: 12px;
+				margin-bottom: 25px;
+			}
+		}
+		& .form-select {
+			width: 130px;
+			font-size: 14px;
+			padding-bottom: 8px;
+			&:hover {
+				background-color: #000;
+				color: #fff;
+			}
+		}
+	}
+	> button {
+		width: 100%;
+		padding: 7px 0 10px;
+		font-size: 14px;
+	}
+}
