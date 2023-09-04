@@ -5,7 +5,7 @@ import {useSearchParams} from 'react-router-dom';
 
 const ProductAll = () => {
   const [productList, setProductList] = useState([]);
-  const [query, setQuery] = useSearchParams();   //👈 URL의 쿼리를 읽어오는 React-Hook.
+  const [query, setQuery] = useSearchParams();
 
   const getproducts = async () => {
     let searchQuery = query.get('q') || '';
@@ -19,7 +19,7 @@ const ProductAll = () => {
 
   useEffect(() => {
     getproducts();
-  }, [query]);   //👈 useEffect()에서 query 값의 변화를 감지. => 생략하면 검색불가.
+  }, [query]);
 
   return (
     <div>

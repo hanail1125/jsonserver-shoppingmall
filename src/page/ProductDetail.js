@@ -3,14 +3,14 @@ import {Button, Col, Container, Form, Row} from 'react-bootstrap';
 import {useParams} from 'react-router-dom';
 
 const ProductDetail = () => {
-  let {id} = useParams();   //👈 클릭한 주소에서 파라미터의 id값을 가져온다.
-  const [product, setProduct] = useState(null);   //👈 패치된 DATA를 뿌려주기위해 스테이트로 관리.
+  let {id} = useParams();
+  const [product, setProduct] = useState(null);
   const getProductDetail = async () => {
-    let url = `http://localhost:5000/products/${id}`;   //👈 요청 DATA 주소 => 포트 5000번에 주의!! 3000번이 아님)
+    let url = `https://my-json-server.typicode.com/hanail1125/jsonserver-shoppingmall/products/${id}`;
     let res = await fetch(url);
     let data = await res.json();
     console.log('data => ', data);
-    setProduct(data);   //👈 패치된 DATA를 뿌려주기위해 스테이트로 저장.
+    setProduct(data);
   };
 
   useEffect(() => {
